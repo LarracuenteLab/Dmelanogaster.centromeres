@@ -1,0 +1,379 @@
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method = "auto")
+twoL$changes<-twoL$mel-twoL$sim
+b<-subset(twoL,twoL$sim+twoL$mel>=10000)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method = "auto")
+b<-subset(twoL,twoL$sim+twoL$mel>=2000)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method = "auto")
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="loess")
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="loess")+stat_quantile(quantiles=0.5,formula=y~x,colour="red")
+library(quantreg)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="loess")+stat_quantile(quantiles=0.5,formula=y~x,colour="red")
+twoR<-read.table("~/Desktop/test",header=T)
+twoR$changes<-twoR$mel-twoR$sim
+b<-subset(twoR,twoR$sim+twoR$mel>=2000)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+stat_quantile(quantiles=0.5,formula=y~x,colour="red")
+threeL<-read.table("~/Desktop/test",header=T)
+threeL$changes<-threeL$mel-threeL$sim
+b<-subset(threeL,threeL$sim+threeL$mel>=2000)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+stat_quantile(quantiles=0.5,formula=y~x,colour="red")
+threeR<-read.table("~/Desktop/test",header=T)
+threeR$changes<-threeR$mel-threeR$sim
+b<-subset(threeL,threeL$sim+threeL$mel>=2000)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+stat_quantile(quantiles=0.5,formula=y~x,colour="red")
+b<-subset(threeR,threeR$sim+threeR$mel>=2000)
+ggplot(b, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel>=2000)#
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")
+twoL_filter<-subset(twoL,twoL$sim+twoL$mel>=2000)#
+twoR_filter<-subset(twoR,twoR$sim+twoR$mel>=2000)#
+threeL_filter<-subset(threeL,threeL$sim+threeL$mel>=2000)#
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel>=2000)#
+X_filter<-subset(X,X$sim+X$mel>=2000)#
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")
+twoL_filter<-subset(twoL,twoL$sim+twoL$mel>=4000)#
+twoR_filter<-subset(twoR,twoR$sim+twoR$mel>=4000)#
+threeL_filter<-subset(threeL,threeL$sim+threeL$mel>=4000)#
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel>=4000)#
+X_filter<-subset(X,X$sim+X$mel>=4000)#
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+title('2L')
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+main('2L')
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")+theme(#
+plot.title = element_text(color="red", size=14, face="bold.italic")
+)
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")+theme(plot.title = element_text(color="red", size=14, face="bold.italic",hjust=10)
+)
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")+theme(plot.title = element_text(color="red", size=14, face="bold.italic",hjust=-10))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")+theme(plot.title = element_text(color="red", size=14, face="bold.italic"))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")+theme(plot.title = element_text(color="red", size=14, face="bold.italic",hjust=0.5))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle("2L")+theme(plot.title = element_text( size=14, face="bold.italic",hjust=0.5))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+title('2L')+theme(plot.title = element_text( size=14, face="bold",hjust=0.5))
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+title('2R')+theme(plot.title = element_text( size=14, face="bold",hjust=0.5))
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2R')+theme(plot.title = element_text( size=14, face="bold",hjust=0.5))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(threeL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(threeL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(100000,-100000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(threeL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-10000,10000)
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-50000,50000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-50000,50000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-50000,50000)
+ggplot(threeL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-10000,10000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(X, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+X_filter<-subset(X,X$sim+X$mel>=1000)
+ggplot(X, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+X_filter<-subset(X,X$sim+X$mel>=2000)
+ggplot(X, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+X_filter<-subset(X,X$sim+X$mel>=1000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('2L')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(twoL_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-2000,2000)
+X_filter<-subset(X,X$sim+X$mel<=2000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-2000,2000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+twoR_filter<-subset(twoR,twoR$sim+twoR$mel<=2000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+twoR_filter<-subset(twoR,twoR$mel<=2000)
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(twoR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('X')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-1000,1000)
+threeR<-read.table("~/Desktop/bb.txt")
+threeR$mauchanges<-threeR$mau-threeR$sim
+head(threeR)
+threeR<-read.table("~/Desktop/bb.txt",header=T)
+head(threeR)
+threeR$mauchanges<-threeR$mau-threeR$sim
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel>=4000)
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+threeR$changes<-threeR$mel-threeR$sim
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel>=4000)
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+ylim(-100000,100000)
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-100000,100000))
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+threeR$sechchanges<-threeR$sech-threeR$sim
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel>=4000)
+ggplot(threeR_filter, aes(pos, sechchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+ggplot(threeR_filter, aes(pos, sechchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(threeR_filter, aes(pos, sechchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+ggplot(threeR_filter, aes(pos, sechchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-2000,2000))
+threeR_filter<-subset(threeR,threeR$sim+threeR$mel+threeR$mau+threeR$sech>=4000)
+ggplot(threeR_filter, aes(pos, sechchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-2000,2000))
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-2000,2000))
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-2000,2000))
+ggplot(threeR_filter, aes(pos, mauchanges)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(threeR_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-2000,2000))
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-2000,2000))
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+X_filter<-subset(X,X$sim+X$mel>=2000)
+ggplot(X_filter, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+ggplot(X, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-1000,1000))
+ggplot(X, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-100,100))
+ggplot(2L, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-100,100))
+ggplot(twoL, aes(pos, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-100,100))
+plot(twoL$mel,twoL$changes)
+ggplot(twoL, aes(sim, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))+coord_cartesian(ylim=c(-100,100))
+ggplot(twoL, aes(sim, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(threeL, aes(sim, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(threeR, aes(sim, changes)) + geom_point() + geom_smooth(method="auto")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+ggplot(threeR, aes(sim, changes)) + geom_point() + geom_smooth(method="lm")+ylab('mel-sim')+xlab('sim_coordinate')+ggtitle('3R')+theme(plot.title = element_text( size=18, face="bold",hjust=0.5))
+cor.test(threeR$sim,threeR$changes)
+cor.test(twoL$sim,twoL$changes)
+?cor.test
+cor.test(twoL$sim,twoL$changes,method = c("spearman"))
+cor.test(twoR$sim,twoR$changes,method = c("spearman"))
+cor.test(threeR$sim,threeR$changes,method = c("spearman"))
+cor.test(threeL$sim,threeL$changes,method = c("spearman"))
+cor.test(threeL$pos,threeL$changes,method = c("spearman"))
+cor.test(threeR$pos,threeR$changes,method = c("spearman"))
+?wilcox.test
+a<-read.table("~/Desktop/test1")
+head(a)
+a<-read.table("~/Desktop/test1",header=T)
+wilcox.test(a$sim_intron,a$mel_intron, paired=T)
+wilcox.test(a$mau_intron,a$mel_intron, paired=T)
+wilcox.test(a$sec_intron,a$mel_intron, paired=T)
+wilcox.test(a$sec_intron,a$sim_intron, paired=T)
+wilcox.test(a$sec_intron,a$mau_intron, paired=T)
+wilcox.test(a$sim_intron,a$mau_intron, paired=T)
+a<-read.table("~/Desktop/test")
+wilcox.test(a$V1,a$V2, paired=T)
+head(a)
+a<-read.table("~/Desktop/test", header=T)
+wilcox.test(a$sim_intron,a$mau_intron, paired=T)
+wilcox.test(a$sim_intron,a$sec_intron, paired=T)
+?wilcox.test
+wilcox.test(a$mau_intron,a$sec_intron, paired=T)
+wilcox.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+boxplot(a)
+a<-read.table("~/Desktop/test", header=T)
+wilcox.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+wilcox.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")
+wilcox.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")
+wilcox.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")
+wilcox.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")
+wilcox.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+a<-read.table("~/Desktop/test", header=T)
+wilcox.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+wilcox.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+median(a$sim_intron)
+head(a$sim_intron)
+median(a$sim_intron)
+wilcox.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided", na.rm=TRUE)
+median(a$sim_intron, na.rm=TRUE)
+median(a$mau_intron, na.rm=TRUE)
+average(a$mau_intron, na.rm=TRUE)
+mean(a$mau_intron, na.rm=TRUE)
+mean(a$sec_intron, na.rm=TRUE)
+mean(a$sim_intron, na.rm=TRUE)
+ttest
+?t.test()
+t.test(a$mau_intron,a$sec_intron, paired=T)
+t.test(a$mau_intron,a$sec_intron, paired=T, na.rm=TRUE)
+t.test(a$sim_intron,a$sec_intron, paired=T, na.rm=TRUE)
+t.test(a$sim_intron,a$mel_intron, paired=T, na.rm=TRUE)
+t.test(a$sim_intron,a$sec_intron, paired=T, na.rm=TRUE)
+t.test(a$sim_intron,a$sec_intron, paired=T, na.rm=TRUE,alternative = c("two.sided"))
+hist(a$sim_intron)
+hist(a$sim_intron,breaks=1000)
+hist(a$sim_intron,breaks=1000,xlim=c(0,1000))
+hist(a$sim_intron,breaks=1000,xlim=c(0,10000))
+hist(a$sim_intron,breaks=10000,xlim=c(0,1000))
+a<-read.table("~/Desktop/test", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+wilcox.test(a$sim_intron,a$mel_intron, paired=F, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$mel_intron, paired=F, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sec_intron,a$mel_intron, paired=F, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$mau_intron, paired=F, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$sec_intron, paired=F, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$sec_intron, paired=F, alternative = "two.sided", na.rm=TRUE)
+wilcox.test(a$sim_intron,a$mel_intron, alternative = "two.sided", na.rm=TRUE)
+wilcox.test(a$sim_intron,a$mel_intron, paired=True, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$mel_intron, paired=True, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sec_intron,a$mel_intron, paired=True, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$mau_intron, paired=True, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$sec_intron, paired=True, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$sec_intron, paired=True, alternative = "two.sided", na.rm=TRUE)
+?wilcox.test
+wilcox.test(a$sim_intron,a$mel_intron, paired=TRUE, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$mel_intron, paired=TRUE, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sec_intron,a$mel_intron, paired=TRUE, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$mau_intron, paired=TRUE, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$sim_intron,a$sec_intron, paired=TRUE, alternative = "two.sided", na.rm=TRUE)#
+wilcox.test(a$mau_intron,a$sec_intron, paired=TRUE, alternative = "two.sided", na.rm=TRUE)
+?t.test
+a<-read.table("~/Desktop/test", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+head(a)
+a<-read.table("~/Desktop/test1", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+a<-read.table("~/Desktop/test1", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+a<-read.table("~/Desktop/test1", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+head(a)
+a<-read.table("~/Desktop/test1", header=T)
+head(a)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+mean(a$mau_intron)
+mean(a$sim_intron, na.rm=TRUE)
+mean(a$mau_intron, na.rm=TRUE)
+mean(a$sec_intron, na.rm=TRUE)
+mean(a$mel_intron, na.rm=TRUE)
+length(a$sim_intron>a$sec_intron)
+length(a$sim_intron<a$sec_intron)
+length(subset(a,a$sim_intron<a$sec_intron))
+length(subset(a,a$sim_intron>a$sec_intron))
+subset(a,a$sim_intron>a$sec_intron)
+wc(subset(a,a$sim_intron>a$sec_intron))
+nrow(subset(a,a$sim_intron>a$sec_intron))
+nrow(subset(a,a$sim_intron<a$sec_intron))
+a<-read.table("~/Desktop/test1", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+a<-read.table("~/Desktop/test1", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+a<-read.table("~/Desktop/test1", header=T)
+t.test(a$sim_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sec_intron,a$mel_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$mau_intron, paired=T, alternative = "two.sided")#
+t.test(a$sim_intron,a$sec_intron, paired=T, alternative = "two.sided")#
+t.test(a$mau_intron,a$sec_intron, paired=T, alternative = "two.sided")
+a<-read.table("~/Desktop/dd.txt")
+library(ggplot2)
+ggplot(a,aes(K,fill=phenotype))+ geom_histogram(binwidth = 2)+ylab("count per 10Kb")+xlim(c(0,200))+scale_fill_manual(values=cbPalette)
+ggplot(a,aes(K,fill=phenotype))+ geom_histogram(binwidth = 0.5)
+a<-read.table("~/Desktop/dd.txt",header=T)
+ggplot(a,aes(K,fill=phenotype))+ geom_histogram(binwidth = 0.5)
+ggplot(a,aes(K,fill=phenotype))+ geom_histogram(binwidth = 0.05)
+ggplot(a,aes(K,fill=phenotype))+ geom_histogram(binwidth = 0.05)+theme_bw()
+library(karyoploteR)#
+library(regioneR)#
+library(GenomicRanges) #
+library(rtracklayer) #
+library(IRanges) #
+#
+#enrichment only based on mapq>30#
+all<-read.table("dmel_V5_pacbio.bam_q30.out",header=T)#
+#
+#subset data frames for CENP-A and H3#
+c119t<-subset(all,all$Contig =='Contig119')#
+c79t<-subset(all,all$Contig =='Contig79')#
+c142t<-subset(all,all$Contig =='Contig142')#
+c3t<-subset(all,all$Contig =='3R_5')#
+cY26t<-subset(all,all$Contig =='Y_Contig26')#
+c22795t<-subset(all,all$Contig =='tig00022795')#
+c57289t<-subset(all,all$Contig =='tig00057289')#
+#
+custom.genome <- toGRanges("mygenome.txt")#
+custom.cytobands <- toGRanges("TE_masker_cen_noAATAT.new.colors")#
+#
+cen3oligo <- toGRanges("oligopaints.info/Dmel_Cen3_Oligopaints.rename.bed")#
+cenXoligo <- toGRanges("oligopaints.info/Dmel_CenX_30nt_Oligopaints.bed")#
+cen4oligo <- toGRanges("oligopaints.info/Dmel_CenUnk_Oligopaints.bed")#
+cenYoligo <- toGRanges("oligopaints.info/Dmel_CenY_Oligopaints.bed")#
+# Set colors based on annotations no AATAT and AATATAT#
+v = c("darkcyan" , "blue"    , "springgreen3",  "cyan",  "blueviolet" , "goldenrod1" ,  "red", "yellow" , "maroon","dodgerblue3","forestgreen","grey","grey" )#
+names(v) =c( "10bp",  "AAGAG", "AAGAT" , "AATAG", "Dodeca", "Gypsy",  "Other_DNA", "IGS",   "Jockey","Other_LTR","Other_Non-LTR","Other_simple","Other")#
+#depth#
+kp <- plotKaryotype(genome = custom.genome, cytobands = custom.cytobands,plot.type=2,ideogram.plotter = NULL,cex=.7,chromosomes=c("Contig79","Contig119","Y_Contig26","3R_5","tig00057289"))#
+kpAddCytobandsAsLine(kp,color.table=v,lwd=5)#
+kpAddBaseNumbers(kp,tick.dist=10000)#
+kpAxis(kp, r0=0, r1=1,tick.pos = c(0,1,2,3),ymin=0,ymax=3,cex=.5)#
+kpBars(kp, chr="Contig119",border=NA,col=1, x0=c119t$pos,x1=c119t$pos+1, y1=c119t$depth/98.32,data.panel = 1, r0=0,r1=1/3)#
+kpLines(kp,chr="Contig119",x=1:93914, y=1/3,col="blue")#
+kpBars(kp, chr="Contig79",border=NA,col=1, x0=c79t$pos,x1=c79t$pos+1, y1=c79t$depth/49.16,data.panel = 1, r0=0,r1=1/3)#
+kpLines(kp,chr="Contig79",x=1:70181, y=1/3,col="blue")#
+kpBars(kp, chr="Y_Contig26",border=NA,col=1, x0=cY26t$pos,x1=cY26t$pos+1, y1=cY26t$depth/49.16,data.panel = 1, r0=0,r1=1/3)#
+kpLines(kp,chr="Y_Contig26",x=1:139957, y=1/3,col="blue")#
+kpBars(kp, chr="3R_5",border=NA,col=1,  x0=c3t$pos,x1=c3t$pos+1, y1=c3t$depth/98.32,data.panel = 1, r0=0,r1=1/3)#
+kpLines(kp,chr="3R_5",x=1:103827, y=1/3,col="blue")#
+kpBars(kp, chr="tig00057289",border=NA,col=1,  x0=c57289t$pos,x1=c57289t$pos+1, y1=c57289t$depth/98.32,data.panel = 1, r0=0,r1=1/3)#
+kpLines(kp,chr="tig00057289",x=1:24561, y=1/3,col="blue")
+a<-read.table("~/Desktop/test")
+a
+hist(a$V1)
+hist(a$V1,breaks=100000)
+hist(a$V1,breaks=1000000)
+a<-read.table("~/Desktop/test")
+hist(a$V1,breaks=1000000)

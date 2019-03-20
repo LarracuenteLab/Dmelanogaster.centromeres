@@ -67,7 +67,7 @@ kpLines(kp,chr="3R_5",x=1:103827, y=1/3,col="blue")
 kpBars(kp, chr="tig00057289",border=NA,col=1,  x0=c57289t$pos,x1=c57289t$pos+1, y1=c57289t$depth/98.32,data.panel = 1, r0=0,r1=1/3)
 kpLines(kp,chr="tig00057289",x=1:24561, y=1/3,col="blue")
 
-dev.copy(pdf,"Figure_2_grey_R1_no_AATAT_small.pdf", width=12, height=10)
+dev.copy(pdf,"Figure_S6_grey_R1_no_AATAT_small.pdf", width=12, height=10)
 dev.off()
 
 legend("topright",c( "10bp",  "AAGAG", "AAGAT" , "AATAG", "AATAT",  "AATATAT", "Dodeca", "Gypsy",  "Other_DNA", "IGS",   "Jockey","Other_LTR","Other_Non-LTR","Other_simple","Other"),col=c("darkcyan" , "blue"    , "springgreen3",  "cyan",    "black"  ,  "black", "blueviolet" , "goldenrod1" ,  "red", "yellow" , "maroon","dodgerblue3","forestgreen","grey","grey" ),pch=15)
